@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+"use strict";
 var fs = require("fs");
 var path = require("path");
 
@@ -8,13 +9,13 @@ var gitrunner = require("gitrunner");
 var check = function(folder, onupdate, oncompleted) {
     gitrunner.fullStatus(folder, function(status) {
         if (status.isRepo) {
-            onupdate(status),
+            onupdate(status);
             oncompleted();
         } else {
             // Not a git repo - check subfolders
             fs.readdir(folder, function(err, files) {
                 (function loopfn(i, completed) {
-                    if (!(i < files.length)) {
+                    if (i >= files.length) {
                         if (completed) completed();
                         return;
                     }
@@ -28,11 +29,11 @@ var check = function(folder, onupdate, oncompleted) {
                             loopfn(i + 1, completed);
                         }
                     });
-                })(0, oncompleted)
+                })(0, oncompleted);
             });
 
         }
-    })
+    });
 };
 
 
@@ -48,4 +49,4 @@ check(process.cwd(), function(folder) {
     function() {
         console.log("completed check");
         // todo: fire update for any missing folders in knownfolders
-    })
+    });
