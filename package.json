@@ -13,8 +13,19 @@
     "bin": {
         "gitcheck": "./gitcheck.js"
     },
+    "scripts": {
+        "test": "eslint . && mocha",
+        "posttest": "publish"
+    },
     "dependencies": {
         "gitrunner": "*"
+    },
+    "devDependencies": {
+        "eslint": "^1.0.0",
+        "babel-eslint": "*",
+        "publish": "^0.5.0",
+        "chai": "*",
+        "mocha": "*"
     },
     "engines": {
         "node": ">=0.8",

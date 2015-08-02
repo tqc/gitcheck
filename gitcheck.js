@@ -28,16 +28,12 @@ var check = function(folder, onupdate, oncompleted) {
                             loopfn(i + 1, completed);
                         }
                     });
-                })(0, oncompleted)
+                })(0, oncompleted);
             });
 
         }
-    })
+    });
 };
-
-
-var knownfolders = {};
-
 
 check(process.cwd(), function(folder) {
         if (folder.changedFiles.length > 0) {
@@ -48,4 +44,4 @@ check(process.cwd(), function(folder) {
     function() {
         console.log("completed check");
         // todo: fire update for any missing folders in knownfolders
-    })
+    });
