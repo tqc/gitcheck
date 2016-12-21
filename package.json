@@ -1,6 +1,6 @@
 {
     "name": "gitcheck",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "A tool for checking the status of multiple git repositories",
     "author": "Tom Clarkson <tom@orangeguava.com> (http://tqclarkson.com)",
     "repository": {
@@ -18,7 +18,7 @@
         "posttest": "publish"
     },
     "dependencies": {
-        "gitrunner": "*"
+        "gitrunner": "^2.0.11"
     },
     "devDependencies": {
         "eslint": "^1.0.0",
@@ -28,8 +28,7 @@
         "mocha": "*"
     },
     "engines": {
-        "node": ">=0.8",
-        "npm": "1"
+        "node": ">=4 < 7"
     },
     "licenses": [{
         "type": "MIT",

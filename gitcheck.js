@@ -3,10 +3,10 @@
 var fs = require("fs");
 var path = require("path");
 
-var gitrunner = require("gitrunner");
+var gitrunner = require("gitrunner").Async;
 
 var check = function(folder, onupdate, oncompleted) {
-    gitrunner.fullStatus(folder, function(status) {
+    gitrunner.fullStatus(folder, function(err, status) {
         if (status.isRepo) {
             onupdate(status),
             oncompleted();
