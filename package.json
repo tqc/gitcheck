@@ -15,7 +15,6 @@
     },
     "scripts": {
         "test": "eslint . && mocha",
-        "posttest": "publish"
     },
     "dependencies": {
         "gitrunner": "^2.0.11"
