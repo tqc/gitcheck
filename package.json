@@ -1,36 +1,37 @@
 {
-    "name": "gitcheck",
-    "version": "0.0.3",
-    "description": "A tool for checking the status of multiple git repositories",
-    "author": "Tom Clarkson <tom@orangeguava.com> (http://tqclarkson.com)",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/tqc/gitcheck"
-    },
-    "bugs": {
-        "url": "https://github.com/tqc/gitcheck/issues"
-    },
-    "bin": {
-        "gitcheck": "./gitcheck.js"
-    },
-    "scripts": {
-        "test": "eslint . && mocha"
-    },
-    "dependencies": {
-        "gitrunner": "^2.0.11"
-    },
-    "devDependencies": {
-        "eslint": "^1.0.0",
-        "babel-eslint": "*",
-        "publish": "^0.5.0",
-        "chai": "*",
-        "mocha": "*"
-    },
-    "engines": {
-        "node": ">=4 < 7"
-    },
-    "licenses": [{
-        "type": "MIT",
-        "url": "https://github.com/tqc/gitcheck/raw/master/LICENSE"
-    }]
+  "name": "gitcheck",
+  "version": "1.0.0",
+  "description": "A tool for checking the status of multiple git repositories",
+  "author": "Tom Clarkson <tom@orangeguava.com> (http://tqclarkson.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tqc/gitcheck"
+  },
+  "bugs": {
+    "url": "https://github.com/tqc/gitcheck/issues"
+  },
+  "bin": {
+    "gitcheck": "./gitcheck.js"
+  },
+  "scripts": {
+    "test": "eslint . && mocha"
+  },
+  "dependencies": {
+    "gitrunner": "^2.0.12"
+  },
+  "devDependencies": {
+    "eslint": "^3.12.2",
+    "babel-eslint": "^7.1.1",
+    "chai": "^3.5.0",
+    "mocha": "3.2.0"
+  },
+  "engines": {
+    "node": "^6"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/tqc/gitcheck/raw/master/LICENSE"
+    }
+  ]
 }
