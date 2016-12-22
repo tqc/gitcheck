@@ -35,7 +35,8 @@ var check = function(folder, onupdate, oncompleted) {
     });
 };
 
-check(process.cwd(), function(folder) {
+check(process.cwd(),
+    function(folder) {
         if (folder.changedFiles.length > 0) {
             console.log(folder.changedFiles.length + " changed files in " + folder.path);
             //console.log(folder)
