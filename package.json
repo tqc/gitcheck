@@ -17,7 +17,7 @@
     "test": "eslint . && mocha"
   },
   "dependencies": {
-    "gitrunner": "^2.0.12"
+    "gitrunner": "^2.0.14"
   },
   "devDependencies": {
     "eslint": "^3.12.2",

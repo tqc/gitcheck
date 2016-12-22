@@ -48,16 +48,29 @@ var check = function(folder, onupdate, oncompleted) {
 
 check(process.cwd(),
     function(folder) {
+        var relpath = path.relative(process.cwd(), folder.path) || ".";
+        if (folder.changedFiles.length == 1) {
+            console.log("1 changed file in " + relpath);
+            return;
+        }
+        if (folder.changedFiles.length > 1) {
+            console.log(folder.changedFiles.length + " changed files in " + relpath);
+            return;
+        }
+        if (folder.unpushedCommits.length == 1) {
+            console.log("1 unpushed commit in " + relpath);
+        }
+        if (folder.unpushedCommits.length > 1) {
+            console.log(folder.unpushedCommits.length + " unpushed commits in " + relpath);
+        }
         if (!folder.branch) {
-            console.log("No branch set for " + folder.path);
+            console.log("No branch set for " + relpath);
+            return;
         }
         if (!folder.remoteBranch) {
-            console.log("No remote branch for " + folder.path);
+            console.log("No remote branch for " + relpath);
         }
-        if (folder.changedFiles.length > 0) {
-            console.log(folder.changedFiles.length + " changed files in " + folder.path);
-            //console.log(folder)
-        }
+
     },
     function() {
         console.log("completed check");
