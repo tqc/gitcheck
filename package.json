@@ -14,7 +14,7 @@
         "gitcheck": "./gitcheck.js"
     },
     "scripts": {
-        "test": "eslint . && mocha",
+        "test": "eslint . && mocha"
     },
     "dependencies": {
         "gitrunner": "^2.0.11"
